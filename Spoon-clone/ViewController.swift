@@ -52,11 +52,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func imageGradient(_ img: UIImageView) {
         let gradient = CAGradientLayer()
             gradient.frame =  CGRect(origin: CGPoint.zero, size: img.frame.size)
-            gradient.colors = [UIColor.systemPink.cgColor, UIColor.yellow.cgColor]
+            gradient.colors = [UIColor.systemPink.cgColor, UIColor.purple.cgColor]
         
         let shape = CAShapeLayer()
-            shape.lineWidth = 3
-            shape.path = UIBezierPath(roundedRect: img.bounds.insetBy(dx: 1, dy: 1), cornerRadius: img.frame.width * 0.5).cgPath
+            shape.lineWidth = 2
+            shape.path = UIBezierPath(roundedRect: img.bounds.insetBy(dx: 2, dy: 2), cornerRadius: img.frame.height / 2).cgPath
             shape.strokeColor = UIColor.black.cgColor
             shape.fillColor = UIColor.clear.cgColor
             gradient.mask = shape
